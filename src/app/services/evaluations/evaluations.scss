@@ -1,0 +1,12 @@
+.evaluations-hero {
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('/assets/images/Evaluations-hero.jpeg');
+  background-size: cover;
+  background-position: center 40%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  
+  @media (max-width: 768px) {
+    background-attachment: scroll;
+    background-position: center;
+  }
+}

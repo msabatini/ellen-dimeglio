@@ -11,8 +11,8 @@
     
     <!-- Navigation (Desktop & Mobile Offcanvas) -->
     <div class="offcanvas-lg offcanvas-end" data-bs-backdrop="false" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-body p-lg-0">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <div class="offcanvas-body p-0 p-lg-0">
+        <ul class="navbar-nav ms-3 mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link px-3" routerLink="/about" data-bs-dismiss="offcanvas">ABOUT</a>
           </li>
@@ -20,7 +20,10 @@
             <a class="nav-link px-3" routerLink="/services" data-bs-dismiss="offcanvas">SERVICES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link px-3" href="#" data-bs-dismiss="offcanvas">FEES & INSURANCE</a>
+            <a class="nav-link px-3" routerLink="/fees-insurance" data-bs-dismiss="offcanvas">FEES & INSURANCE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" routerLink="/simple-practice" data-bs-dismiss="offcanvas">SIMPLE PRACTICE</a>
           </li>
           <li class="nav-item">
             <a class="nav-link px-3" href="#" data-bs-dismiss="offcanvas">CONTACT</a>
@@ -34,10 +37,10 @@
 <router-outlet />
 
 <footer class="footer-top mt-5">
-  <div class="container text-center text-md-start">
+  <div class="container text-start">
     <div class="row align-items-center mb-5">
       <div class="col-md-6">
-        <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
+        <div class="d-flex align-items-center justify-content-start mb-2">
           <a routerLink="/" class="text-decoration-none d-flex align-items-center">
             <img src="assets/images/ellen-new-logo1.svg" alt="Logo" height="30" class="filter-white" style="filter: brightness(0) invert(1);">
           </a>
@@ -45,10 +48,11 @@
         <p class="small opacity-75 mb-0">Clinical Psychology For Children, Adolescents And Adults</p>
       </div>
       <div class="col-md-6">
-        <ul class="nav footer-nav justify-content-center justify-content-md-end">
+        <ul class="nav footer-nav justify-content-start justify-content-md-end">
           <li class="nav-item"><a class="nav-link px-2" routerLink="/about">ABOUT</a></li>
           <li class="nav-item"><a class="nav-link px-2" routerLink="/services">SERVICES</a></li>
-          <li class="nav-item"><a class="nav-link px-2" href="#">FEES AND INSURANCE</a></li>
+          <li class="nav-item"><a class="nav-link px-2" routerLink="/fees-insurance">FEES AND INSURANCE</a></li>
+          <li class="nav-item"><a class="nav-link px-2" routerLink="/simple-practice">SIMPLE PRACTICE</a></li>
           <li class="nav-item"><a class="nav-link px-2" href="#">CONTACT</a></li>
         </ul>
       </div>

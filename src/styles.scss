@@ -11,6 +11,15 @@ body {
   font-family: 'Outfit', sans-serif;
   color: #333;
   padding-top: $header-height;
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  text-wrap: balance;
+}
+
+p, .lead {
+  text-wrap: balance;
 }
 
 .container-custom {
@@ -60,6 +69,11 @@ body {
       background: none;
     }
   }
+}
+
+.offcanvas-lg.show:not(.hiding), .offcanvas-lg.showing {
+  transform: translateX(0) !important;
+  background-color: #557591;
 }
 
 @keyframes fadeIn {
@@ -154,14 +168,14 @@ body {
 [class*="offcanvas"] {
   width: 80% !important;
   max-width: 400px;
-  background-color: #fff;
+  background-color: $dark-blue;
   transition: transform 0.4s ease-in-out !important;
 
   @media (max-width: 991px) {
     top: $header-height !important;
     height: calc(100vh - #{$header-height}) !important;
-    border-top: 1px solid rgba(0,0,0,0.05);
-    box-shadow: -10px 10px 20px rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    box-shadow: -10px 10px 20px rgba(0,0,0,0.1);
   }
 
   @media (min-width: 992px) {
@@ -180,14 +194,20 @@ body {
     @media (max-width: 991px) {
       font-size: 1.1rem;
       padding: 1rem 1.5rem !important;
-      border-bottom: 1px solid rgba(0,0,0,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
       width: 100%;
+      color: white !important;
       
       &:hover {
-        border-bottom: 1px solid rgba(0,0,0,0.05);
-        background-color: rgba($primary-blue, 0.05);
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white !important;
       }
     }
+  }
+
+  .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
   }
 }
 
