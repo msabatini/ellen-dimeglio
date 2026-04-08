@@ -5,19 +5,25 @@ $footer-blue: #6288a8;
 $footer-dark: #557591;
 $text-grey: #666;
 $light-bg: #f8f9fa;
+$header-height: 80px;
 
 body {
   font-family: 'Outfit', sans-serif;
   color: #333;
-  padding-top: 80px;
+  padding-top: $header-height;
 }
 
 .container-custom {
   width: 100%;
-  padding-right: var(--bs-gutter-x, .75rem);
-  padding-left: var(--bs-gutter-x, .75rem);
+  padding-right: 1rem;
+  padding-left: 1rem;
   margin-right: auto;
   margin-left: auto;
+
+  @media (max-width: 1023px) {
+    padding-right: 2rem; // Adding 16px extra (1rem base + 1rem extra)
+    padding-left: 2rem;
+  }
 
   @media (min-width: 1024px) {
     max-width: 960px;
@@ -34,7 +40,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1030;
+  z-index: 1050; // Ensure it's above offcanvas
   background-color: rgba(255, 255, 255, 0.5) !important;
   backdrop-filter: blur(8px);
   
@@ -42,6 +48,16 @@ body {
     @media (max-width: 1023px) {
       margin-left: 0;
       margin-right: 0;
+    }
+  }
+
+  .navbar-toggler {
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+    &:hover {
+      background: none;
     }
   }
 }
@@ -134,11 +150,54 @@ body {
   }
 }
 
+// Offcanvas Mobile Menu Styles
+[class*="offcanvas"] {
+  width: 80% !important;
+  max-width: 400px;
+  background-color: #fff;
+  transition: transform 0.4s ease-in-out !important;
+
+  @media (max-width: 991px) {
+    top: $header-height !important;
+    height: calc(100vh - #{$header-height}) !important;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    box-shadow: -10px 10px 20px rgba(0,0,0,0.05);
+  }
+
+  @media (min-width: 992px) {
+    width: auto !important;
+    max-width: none !important;
+    background-color: transparent !important;
+    transform: none !important;
+    visibility: visible !important;
+    position: static !important;
+    height: auto !important;
+    z-index: auto !important;
+    border-left: none !important;
+  }
+
+  .nav-link {
+    @media (max-width: 991px) {
+      font-size: 1.1rem;
+      padding: 1rem 1.5rem !important;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      width: 100%;
+      
+      &:hover {
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        background-color: rgba($primary-blue, 0.05);
+      }
+    }
+  }
+}
+
 .hero-section {
   background: linear-gradient(180deg, #e3f2fd 0%, #ffffff 100%);
   min-height: 500px;
   display: flex;
   align-items: center;
+  background-position: center 40%;
+  background-attachment: fixed;
 
   .hero-title {
     font-size: 3.5rem;

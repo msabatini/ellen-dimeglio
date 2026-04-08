@@ -3,16 +3,30 @@
     <a class="navbar-brand" routerLink="/">
       <img src="assets/images/ellen-new-logo1.svg" alt="Dr. DiMeglio, Psy.D" height="40">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    
+    <!-- Mobile Toggler -->
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link px-3" routerLink="/about">ABOUT</a></li>
-        <li class="nav-item"><a class="nav-link px-3" routerLink="/services">SERVICES</a></li>
-        <li class="nav-item"><a class="nav-link px-3" href="#">FEES & INSURANCE</a></li>
-        <li class="nav-item"><a class="nav-link px-3" href="#">CONTACT</a></li>
-      </ul>
+    
+    <!-- Navigation (Desktop & Mobile Offcanvas) -->
+    <div class="offcanvas-lg offcanvas-end" data-bs-backdrop="false" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-body p-lg-0">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link px-3" routerLink="/about" data-bs-dismiss="offcanvas">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" routerLink="/services" data-bs-dismiss="offcanvas">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#" data-bs-dismiss="offcanvas">FEES & INSURANCE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#" data-bs-dismiss="offcanvas">CONTACT</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
