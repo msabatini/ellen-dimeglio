@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light py-3">
-  <div class="container">
-    <a class="navbar-brand" href="#">
+  <div class="container-custom d-flex justify-content-between align-items-center w-100">
+    <a class="navbar-brand" routerLink="/">
       <img src="assets/images/ellen-new-logo1.svg" alt="Dr. DiMeglio, Psy.D" height="40">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -8,8 +8,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link px-3" href="#">ABOUT</a></li>
-        <li class="nav-item"><a class="nav-link px-3" href="#">SERVICES</a></li>
+        <li class="nav-item"><a class="nav-link px-3" routerLink="/about">ABOUT</a></li>
+        <li class="nav-item"><a class="nav-link px-3" routerLink="/services">SERVICES</a></li>
         <li class="nav-item"><a class="nav-link px-3" href="#">FEES & INSURANCE</a></li>
         <li class="nav-item"><a class="nav-link px-3" href="#">CONTACT</a></li>
       </ul>
@@ -17,150 +17,23 @@
   </div>
 </nav>
 
-<section class="hero-section">
-  <div class="container text-start">
-    <div class="row">
-      <div class="col-lg-8">
-        <h1 class="hero-title mb-2">Insight. Support. Progress.</h1>
-        <p class="hero-subtitle mb-4">Clinical Psychology For Children, Adolescents And Adults</p>
-        <button class="btn btn-primary-blue rounded-pill px-4">Get Started <i class="bi bi-chevron-right small"></i></button>
-      </div>
-    </div>
-  </div>
-</section>
+<router-outlet />
 
-<section class="philosophy-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7 pe-lg-5 border-end">
-        <h2 class="philosophy-title mb-4">My Philosophy</h2>
-        <p class="text-secondary-blue fw-normal mb-4">Empathetic. Insightful. Down To Earth. My philosophy is that people genuinely want to be happy and to have healthy relationships, but find there are times in life when something just "isn't working". Through the process of therapy, my aim is to learn what is causing you pain, identify changes you'd like to make in your life, and help you work towards achieving these changes.</p>
-        <p class="text-secondary-blue fw-normal">Improving communication with others, learning better coping strategies, and limiting stress and anxiety are all cornerstones of my approach, but are always tailored to you as an individual. If change sounds somewhat scary to you, be assured that we will work at your pace. Therapy is a collaborative effort. Together, we will find ways to use your inherent strengths to help you address what isn't working in your life.</p>
-      </div>
-      <div class="col-md-4 offset-md-1 mt-4 mt-md-0">
-        <h2 class="philosophy-title mb-4">Cornerstones of my approach</h2>
-        <hr class="mb-4">
-        <ul class="cornerstone-list fs-5 text-secondary-blue">
-          <li class="mb-4 ps-2">Improving Communication</li>
-          <li class="mb-4 ps-2">Coping Strategies</li>
-          <li class="mb-2 ps-2">Limiting Stress & Anxiety</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="py-5 bg-secondary-blue mb-5 mb-5">
-  <div class="container">
-    <h2 class="philosophy-title mb-4">Practice Services</h2>
-  </div>
-  
-  <div class="container-fluid px-0">
-    <div class="service-card">
-      <div class="row align-items-center container mx-auto">
-        <div class="col-auto">
-          <i class="bi bi-bullseye fs-1"></i>
-        </div>
-        <div class="col">
-          <h2 class="fw-bold mb-1">Child & Adolescent Therapy</h2>
-          <p class="mb-0 small opacity-75 pe-5">Individual psychotherapy for children and adolescents. Dr. DiMeglio has over two decades of experience helping children with a wide variety of issues. Therapy is tailored to each child's age and needs...</p>
-        </div>
-      </div>
-      <div class="container mx-auto position-relative">
-        <button class="btn btn-outline-light rounded-pill position-absolute end-0 bottom-0 mb-4">Learn More <i class="bi bi-arrow-right"></i></button>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <div class="row align-items-center container mx-auto">
-        <div class="col-auto">
-          <i class="bi bi-circle fs-1"></i>
-        </div>
-        <div class="col">
-          <h2 class="fw-bold mb-1">Adult Therapy</h2>
-          <p class="mb-0 small opacity-75 pe-5">Individual therapy for adults needing treatment for a variety of issues. In therapy, we'll explore how your past and present experiences may be affecting your daily life. Together, we'll identify patterns...</p>
-        </div>
-      </div>
-      <div class="container mx-auto position-relative">
-        <button class="btn btn-outline-light rounded-pill position-absolute end-0 bottom-0 mb-4">Learn More <i class="bi bi-arrow-right"></i></button>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <div class="row align-items-center container mx-auto">
-        <div class="col-auto">
-          <i class="bi bi-chat-square-heart fs-1"></i>
-        </div>
-        <div class="col">
-          <h2 class="fw-bold mb-1">Psychoeducational & Neuropsychological Evaluations</h2>
-          <p class="mb-0 small opacity-75 pe-5">Sometimes, despite hard work or academic support, children struggle significantly with certain aspects of school. Parents, teachers, and often...</p>
-        </div>
-      </div>
-      <div class="container mx-auto position-relative">
-        <button class="btn btn-outline-light rounded-pill position-absolute end-0 bottom-0 mb-4">Learn More <i class="bi bi-arrow-right"></i></button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="attribute-section">
-  <img src="assets/images/empathetic-image-gradient.png" class="attribute-image" alt="Empathetic">
-  <div class="container text-end attribute-content">
-    <div class="row justify-content-end">
-      <div class="col-md-5">
-        <img src="assets/images/psychology_attribute_icons/empathetic_icon.svg" alt="Empathetic Icon" class="mb-2" height="64">
-        <h2 class="fw-bold display-5 mb-3">Empathetic</h2>
-        <p class="small opacity-75">I strive to create a space where you feel genuinely heard and understood. With compassion and care, I work to meet each person where they are and support them through life's challenges.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="attribute-section">
-  <img src="assets/images/insightful-gradient.png" class="attribute-image flip-horizontal" alt="Insightful">
-  <div class="container text-start attribute-content">
-    <div class="row">
-      <div class="col-md-5">
-        <img src="assets/images/psychology_attribute_icons/insightful_icon.svg" alt="Insightful Icon" class="mb-2" height="64">
-        <h2 class="fw-bold display-5 mb-3">Insightful</h2>
-        <p class="small opacity-75">Thoughtful exploration and careful listening often reveal patterns that may not be immediately obvious. Together, we work to develop deeper understanding and meaningful perspectives that support lasting growth.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="attribute-section">
-  <img src="assets/images/downearth-gradient.png" class="attribute-image" alt="Down To Earth">
-  <div class="container text-end attribute-content">
-    <div class="row justify-content-end">
-      <div class="col-md-5">
-        <img src="assets/images/psychology_attribute_icons/down_to_earth_icon.svg" alt="Down To Earth Icon" class="mb-2" height="64">
-        <h2 class="fw-bold display-5 mb-3">Down To Earth</h2>
-        <p class="small opacity-75">Therapy doesn't have to feel intimidating or overly clinical. My approach is practical, straightforward, and grounded in real-life experience, helping you navigate challenges in a way that feels manageable and relatable.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="tagline-section text-center">
-  <div class="container">
-    <h2 class="tagline-text">Empathetic. Insightful. Down to earth.</h2>
-  </div>
-</section>
-
-<footer class="footer-top">
+<footer class="footer-top mt-5">
   <div class="container text-center text-md-start">
     <div class="row align-items-center mb-5">
       <div class="col-md-6">
         <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
-          <img src="assets/images/ellen-new-logo1.svg" alt="Logo" height="30" class="me-2 filter-white" style="filter: brightness(0) invert(1);">
+          <a routerLink="/" class="text-decoration-none d-flex align-items-center">
+            <img src="assets/images/ellen-new-logo1.svg" alt="Logo" height="30" class="filter-white" style="filter: brightness(0) invert(1);">
+          </a>
         </div>
         <p class="small opacity-75 mb-0">Clinical Psychology For Children, Adolescents And Adults</p>
       </div>
       <div class="col-md-6">
         <ul class="nav footer-nav justify-content-center justify-content-md-end">
-          <li class="nav-item"><a class="nav-link px-2" href="#">ABOUT</a></li>
-          <li class="nav-item"><a class="nav-link px-2" href="#">SERVICES</a></li>
+          <li class="nav-item"><a class="nav-link px-2" routerLink="/about">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link px-2" routerLink="/services">SERVICES</a></li>
           <li class="nav-item"><a class="nav-link px-2" href="#">FEES AND INSURANCE</a></li>
           <li class="nav-item"><a class="nav-link px-2" href="#">CONTACT</a></li>
         </ul>
@@ -178,5 +51,3 @@
     <p class="mb-0">Copyright © 2027 Ellen DiMeglio, Psy.D | Insight. Support. Progress. | 2284 South Ave, Scotch Plains, NJ 07076</p>
   </div>
 </div>
-
-<router-outlet />
