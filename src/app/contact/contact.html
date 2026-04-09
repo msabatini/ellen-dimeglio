@@ -1,0 +1,83 @@
+<section class="hero-section contact-hero">
+  <div class="container text-start">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="hero-title mb-2">Contact Dr. DiMeglio</h1>
+        <p class="hero-subtitle mb-4">Taking the first step toward insight and progress.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 my-5">
+  <div class="container-custom">
+    <div class="row g-5">
+      <!-- Contact Info -->
+      <div class="col-lg-5">
+        <h2 class="display-6 fw-bold text-dark-blue mb-4">Get in Touch</h2>
+        <p class="fs-5 text-grey mb-5">Please feel free to reach out with any questions or to schedule an initial consultation. I look forward to hearing from you.</p>
+        
+        <div class="d-flex mb-4">
+          <div class="flex-shrink-0">
+            <i class="bi bi-geo-alt fs-3 text-primary-blue"></i>
+          </div>
+          <div class="ms-4">
+            <h4 class="fw-bold text-dark-blue mb-1">Office Location</h4>
+            <p class="text-grey mb-0">2284 South Ave,<br>Scotch Plains, NJ 07076</p>
+          </div>
+        </div>
+
+        <div class="d-flex mb-4">
+          <div class="flex-shrink-0">
+            <i class="bi bi-telephone fs-3 text-primary-blue"></i>
+          </div>
+          <div class="ms-4">
+            <h4 class="fw-bold text-dark-blue mb-1">Phone</h4>
+            <p class="text-grey mb-0">(908) 379-8301</p>
+          </div>
+        </div>
+
+        <div class="d-flex mb-4">
+          <div class="flex-shrink-0">
+            <i class="bi bi-envelope fs-3 text-primary-blue"></i>
+          </div>
+          <div class="ms-4">
+            <h4 class="fw-bold text-dark-blue mb-1">Email</h4>
+            <p class="text-grey mb-0"><a href="mailto:drdimeglio@gmail.com" class="text-decoration-none text-primary-blue fw-bold">drdimeglio@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-7">
+        <div class="p-5 bg-white shadow-sm rounded-4 border">
+          <h3 class="h4 fw-bold text-dark-blue mb-4">Send a Message</h3>
+          <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+            <div class="mb-4">
+              <label for="name" class="form-label small fw-bold text-secondary-blue">NAME</label>
+              <input type="text" class="form-control form-control-lg border-light-subtle bg-light" id="name" name="name" [(ngModel)]="formData.name" required placeholder="Your full name">
+            </div>
+            
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <label for="email" class="form-label small fw-bold text-secondary-blue">EMAIL</label>
+                <input type="email" class="form-control form-control-lg border-light-subtle bg-light" id="email" name="email" [(ngModel)]="formData.email" required placeholder="Your email address">
+              </div>
+              <div class="col-md-6 mt-4 mt-md-0">
+                <label for="phone" class="form-label small fw-bold text-secondary-blue">PHONE</label>
+                <input type="tel" class="form-control form-control-lg border-light-subtle bg-light" id="phone" name="phone" [(ngModel)]="formData.phone" placeholder="Your phone number">
+              </div>
+            </div>
+
+            <div class="mb-5">
+              <label for="message" class="form-label small fw-bold text-secondary-blue">MESSAGE</label>
+              <textarea class="form-control form-control-lg border-light-subtle bg-light" id="message" name="message" rows="5" [(ngModel)]="formData.message" required placeholder="How can I help you?"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-hero-cta w-100 py-3 fs-5" [disabled]="!contactForm.form.valid">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
