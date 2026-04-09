@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <!-- Abstract representation of support/partnership -->
+  <circle class="st0" cx="18" cy="24" r="8"/>
+  <circle class="st0" cx="30" cy="24" r="5"/>
+  <path class="st0" d="M18,16c4,0,8,4,12,8"/>
+  <path class="st0" d="M18,32c4,0,8-4,12-8"/>
+</svg>

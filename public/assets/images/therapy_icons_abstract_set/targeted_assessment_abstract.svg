@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <!-- Abstract representation of targeted assessment/focus -->
+  <circle class="st0" cx="24" cy="24" r="14"/>
+  <circle class="st0" cx="24" cy="24" r="4"/>
+  <line class="st0" x1="24" y1="4" x2="24" y2="10"/>
+  <line class="st0" x1="24" y1="38" x2="24" y2="44"/>
+  <line class="st0" x1="4" y1="24" x2="10" y2="24"/>
+  <line class="st0" x1="38" y1="24" x2="44" y2="24"/>
+</svg>

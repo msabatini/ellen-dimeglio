@@ -92,6 +92,7 @@ p, .lead {
 .text-secondary-blue { color: $secondary-blue; }
 .bg-secondary-blue { background-color: $secondary-blue; }
 .text-dark-blue { color: $dark-blue; }
+.text-accent { color: $accent-color; }
 .text-grey { color: $text-grey; }
 
 .hover-shadow {
@@ -109,6 +110,12 @@ p, .lead {
 .service-icon {
   filter: invert(53%) sepia(21%) saturate(1021%) hue-rotate(172deg) brightness(96%) contrast(87%); // Approx $primary-blue
   transition: transform 0.3s ease;
+}
+
+.service-icon-page {
+  filter: invert(53%) sepia(21%) saturate(1021%) hue-rotate(172deg) brightness(96%) contrast(87%); // Approx $primary-blue
+  height: 100px;
+  width: auto;
 }
 
 .hover-shadow:hover .service-icon {
