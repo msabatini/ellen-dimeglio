@@ -1,6 +1,7 @@
 $primary-blue: #6c98c1;
 $secondary-blue: #a3c4dc;
 $dark-blue: #5d7e9d;
+$accent-color: #4A96FF;
 $footer-blue: #6288a8;
 $footer-dark: #557591;
 $text-grey: #666;
@@ -117,6 +118,7 @@ p, .lead {
 .service-card-custom {
   background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
   border: 1px solid rgba(108, 152, 193, 0.1) !important;
+  border-bottom: 3px solid transparent !important;
   transition: all 0.3s ease;
 
   p {
@@ -126,6 +128,7 @@ p, .lead {
   &:hover {
     background: linear-gradient(135deg, #ffffff 0%, #e6f2ff 100%);
     border-color: rgba(108, 152, 193, 0.3) !important;
+    border-bottom-color: $accent-color !important;
     transform: translateY(-5px);
   }
 }
@@ -149,15 +152,16 @@ p, .lead {
 .btn-primary-blue {
   background-color: $primary-blue;
   color: white;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 6px;
   padding: 12px 24px;
   font-weight: 600;
-  transition: opacity 0.3s;
+  transition: all 0.3s ease;
 
   &:hover {
-    opacity: 0.9;
-    color: white;
+    background-color: white;
+    color: $primary-blue;
+    border-color: $accent-color;
   }
 }
 
@@ -181,12 +185,28 @@ p, .lead {
   font-size: 0.75rem;
   letter-spacing: 0.05rem;
   color: $dark-blue !important;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
-  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 8px !important;
 
-  &:hover {
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: $accent-color;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  &:hover::after, &.active::after {
+    width: calc(100% - 2rem); // Subtracting horizontal padding (px-3)
+  }
+
+  &.active {
     color: $primary-blue !important;
-    border-bottom: 2px solid $primary-blue;
   }
 }
 
