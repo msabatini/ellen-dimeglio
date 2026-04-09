@@ -87,6 +87,18 @@ p, .lead {
   animation: fadeIn 0.6s ease-out forwards;
 }
 
+// Scroll Reveal Animations
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .text-primary-blue { color: $primary-blue; }
 .bg-primary-blue { background-color: $primary-blue; }
 .text-secondary-blue { color: $secondary-blue; }
