@@ -51,8 +51,16 @@
       <!-- Contact Form -->
       <div class="col-lg-7 reveal">
         <div class="p-5 bg-white shadow-sm rounded-4 border">
-          <h3 class="h4 fw-bold text-dark-blue mb-4">Send a Message</h3>
-          <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+          <div *ngIf="submitted" class="text-center py-5">
+            <i class="bi bi-check-circle-fill text-success display-1 mb-4"></i>
+            <h3 class="fw-bold text-dark-blue mb-3">Message Sent!</h3>
+            <p class="text-grey mb-0">Thank you, {{ formData.name }}. Dr. DiMeglio will get back to you as soon as possible.</p>
+            <button class="btn btn-outline-primary-blue mt-4" (click)="submitted = false">Send Another Message</button>
+          </div>
+
+          <form *ngIf="!submitted" (ngSubmit)="onSubmit()" #contactForm="ngForm" name="contact" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact">
+            <h3 class="h4 fw-bold text-dark-blue mb-4">Send a Message</h3>
             <div class="mb-4">
               <label for="name" class="form-label small fw-bold text-secondary-blue">NAME</label>
               <input type="text" class="form-control form-control-lg border-light-subtle bg-light" id="name" name="name" [(ngModel)]="formData.name" required placeholder="Your full name">

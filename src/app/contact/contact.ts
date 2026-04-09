@@ -17,9 +17,24 @@ export class ContactComponent {
     phone: '',
     message: ''
   };
+  submitted = false;
 
   onSubmit() {
-    console.log('Form submitted:', this.formData);
-    alert('Thank you for your message. We will get back to you soon!');
+    const body = new URLSearchParams();
+    body.set('form-name', 'contact');
+    body.set('name', this.formData.name);
+    body.set('email', this.formData.email);
+    body.set('phone', this.formData.phone);
+    body.set('message', this.formData.message);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body.toString(),
+    })
+      .then(() => {
+        this.submitted = true;
+      })
+      .catch((error) => alert(error));
   }
 }
