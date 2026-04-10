@@ -92,12 +92,15 @@ p, .lead {
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.8s ease-out;
+  position: relative;
+  left: 10px;
   
   &.visible {
     opacity: 1;
     transform: translateY(0);
   }
 }
+    
 
 .text-primary-blue { color: $primary-blue; }
 .bg-primary-blue { background-color: $primary-blue; }
@@ -298,18 +301,19 @@ p, .lead {
     background-color: #96cdff;
     z-index: 1;
     opacity: .5;
+    border-radius: 0 72px 0 0;
   }
 
   .hero-overlay-div2 {
     background: linear-gradient(90deg, #4A96FF 0%, #9C99F5 100%);
     opacity: 0.75;
     width: 760px;
-    height: 230px;
+    height: 180px;
     bottom: -44px;
     left: 0;
     position: absolute;
     z-index: 1;
-    border-radius: 0 0 32px 0;
+    border-radius: 0 0 62px 0;
     background-image: url('/assets/images/hero-div-pattern.jpg');
     background-size: 100%;
       @media (max-width: 768px) {
