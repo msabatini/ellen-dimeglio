@@ -302,15 +302,21 @@ p, .lead {
 
   .hero-overlay-div2 {
     background: linear-gradient(90deg, #4A96FF 0%, #9C99F5 100%);
-    opacity: 0.25;
-    width: 800px;
-    height: 200px;
+    opacity: 0.75;
+    width: 760px;
+    height: 180px;
     bottom: -44px;
     left: 0;
     position: absolute;
     z-index: 1;
     border-radius: 0 0 32px 0;
+    background-image: url('/assets/images/hero-div-pattern.jpg');
+    background-size: 100%;
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
+    
 
   .container {
     position: relative;
