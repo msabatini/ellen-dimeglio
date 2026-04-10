@@ -298,8 +298,19 @@ p, .lead {
     background-color: #96cdff;
     z-index: 1;
     opacity: .5;
-    
   }
+
+  .hero-overlay-div2 {
+    background: linear-gradient(90deg, #4A96FF 0%, #9C99F5 100%);
+    opacity: 0.25;
+    width: 800px;
+    height: 200px;
+    bottom: -44px;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    border-radius: 0 0 32px 0;
+    }
 
   .container {
     position: relative;
