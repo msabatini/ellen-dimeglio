@@ -1,12 +1,4 @@
-$primary-blue: #6c98c1;
-$secondary-blue: #a3c4dc;
-$dark-blue: #5d7e9d;
-$accent-color: #4A96FF;
-$footer-blue: #6288a8;
-$footer-dark: #557591;
-$text-grey: #666;
-$light-bg: #f8f9fa;
-$header-height: 80px;
+@import 'variables';
 
 html, body {
   overflow-x: hidden;
@@ -110,6 +102,8 @@ p, .lead {
 .text-secondary-blue { color: $secondary-blue; }
 .bg-secondary-blue { background-color: $secondary-blue; }
 .text-dark-blue { color: $dark-blue; }
+.text-dark-purple { color: $text-dark-purple; }
+.border-dark-purple { border-color: $text-dark-purple !important; }
 .text-accent { color: $accent-color; }
 .text-grey { color: $text-grey; }
 
@@ -158,10 +152,10 @@ p, .lead {
   }
 }
 
-.btn-hero-cta {
+.btn-gradient {
   background: linear-gradient(90deg, #4A96FF 0%, #9C99F5 100%);
   color: #FFFFFF !important;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 6px;
   padding: 12px 30px;
   font-weight: 600;
@@ -170,8 +164,28 @@ p, .lead {
   &:hover {
     background: transparent !important;
     color: $primary-blue !important;
-    outline: 2px solid $primary-blue;
+    border-color: $primary-blue;
   }
+}
+
+.btn-gradient-outline {
+  background: transparent;
+  color: $primary-blue !important;
+  border: 2px solid $primary-blue;
+  border-radius: 6px;
+  padding: 12px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(90deg, #4A96FF 0%, #9C99F5 100%) !important;
+    color: #FFFFFF !important;
+    border-color: transparent;
+  }
+}
+
+.btn-hero-cta {
+  @extend .btn-gradient;
 }
 
 .btn-primary-blue {
@@ -294,7 +308,7 @@ p, .lead {
   align-items: center;
   background-position: center 40%;
   background-attachment: fixed;
-  overflow: hidden;
+  z-index: 10;
 
   .hero-overlay-div {
     position: absolute;
@@ -340,8 +354,8 @@ p, .lead {
   .hero-subtitle {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #FFFFFF;
-    text-shadow: 0 0 25px #bbbbbb;
+    color: #7471b7;
+    text-shadow: 0 0 25px #FFFFFF;
   }
 }
 
@@ -450,6 +464,7 @@ p, .lead {
   display: flex;
   align-items: center;
   overflow: hidden;
+  display: none; // remove when preparing for design portfolio
 
   .attribute-content {
     z-index: 2;

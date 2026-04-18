@@ -1,5 +1,7 @@
+@import '../../../_variables.scss';
+
 .evaluations-hero {
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('/assets/images/Evaluations-hero.jpeg');
+  background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url('/assets/images/Evaluations-hero.jpeg');
   background-size: cover;
   background-position: center 40%;
   background-attachment: fixed;
@@ -9,4 +11,9 @@
     background-attachment: scroll;
     background-position: center;
   }
+}
+
+
+.evaluation-list {
+    color: $text-dark-purple;
 }

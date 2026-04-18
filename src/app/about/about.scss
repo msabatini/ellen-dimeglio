@@ -1,7 +1,9 @@
+@import '../../_variables.scss';
+
 .about-hero {
   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/assets/images/about-hero.png');
-  background-size: 60%;
-  background-position: 100% 40%;
+  background-size: 70%;
+  background-position: 100% -10%;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
@@ -15,4 +17,12 @@
   @media (max-width: 768px) {
     background-size: 130%;
   }
+}
+
+.about-list {
+    font-size: 1.25rem;
+}
+
+.list-bold {
+    color: $text-dark-purple;
 }
