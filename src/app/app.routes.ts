@@ -6,7 +6,6 @@ import { ChildAdolescentTherapy } from './services/child-adolescent-therapy/chil
 import { AdultTherapy } from './services/adult-therapy/adult-therapy';
 import { EvaluationsComponent } from './services/evaluations/evaluations';
 import { FeesInsuranceComponent } from './fees-insurance/fees-insurance';
-import { SimplePracticeComponent } from './simple-practice/simple-practice';
 import { ContactComponent } from './contact/contact';
 
 export const routes: Routes = [
@@ -17,6 +16,5 @@ export const routes: Routes = [
   { path: 'services/adult-therapy', component: AdultTherapy },
   { path: 'services/psychoeducational-neuropsychological-evaluations', component: EvaluationsComponent },
   { path: 'fees-insurance', component: FeesInsuranceComponent },
-  { path: 'simple-practice', component: SimplePracticeComponent },
   { path: 'contact', component: ContactComponent }
 ];
