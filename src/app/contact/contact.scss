@@ -33,3 +33,12 @@
     transform: scale(1.1);
   }
 }
+
+.btn-hero-cta {
+  &:hover {
+    background: transparent !important;
+    border-color: $dark-blue !important;
+    color: $dark-blue !important;
+    box-shadow: 0 5px 15px rgba(34, 52, 102, 0.1);
+  }
+}

@@ -49,7 +49,7 @@ p, .lead {
   top: 0;
   width: 100%;
   z-index: 1050; // Ensure it's above offcanvas
-  background-color: rgba(222, 244, 255, 0.5) !important;
+  background: linear-gradient(90deg, #FFFFFF 0%, #c8d6fe 75%) !important;
   backdrop-filter: blur(8px);
   
   .navbar-brand, .navbar-nav {
@@ -67,13 +67,17 @@ p, .lead {
     &:hover {
       background: none;
     }
+    .navbar-toggler-icon {
+      filter: brightness(0) invert(1);
+    }
   }
 }
 
 .offcanvas-lg.show:not(.hiding), .offcanvas-lg.showing {
   transform: translateX(0) !important;
-  background-color: #557591;
+  background-color: #83a2dd;
 }
+
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
@@ -105,7 +109,7 @@ p, .lead {
 .text-dark-purple { color: $text-dark-purple; }
 .border-dark-purple { border-color: $text-dark-purple !important; }
 .text-accent { color: $accent-color; }
-.text-grey { color: $text-grey; }
+.text-blue { color: $text-blue; }
 
 .hover-shadow {
   transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -160,11 +164,18 @@ p, .lead {
   padding: 12px 30px;
   font-weight: 600;
   transition: all 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     background: transparent !important;
     color: $primary-blue !important;
     border-color: $primary-blue;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 150, 255, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
   }
 }
 
@@ -176,16 +187,30 @@ p, .lead {
   padding: 12px 30px;
   font-weight: 600;
   transition: all 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     background: linear-gradient(90deg, #4A96FF 0%, #9C99F5 100%) !important;
     color: #FFFFFF !important;
     border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 150, 255, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
   }
 }
 
 .btn-hero-cta {
   @extend .btn-gradient;
+
+  &:hover {
+    background: transparent !important;
+    color: #FFFFFF !important;
+    border-color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+  }
 }
 
 .btn-primary-blue {
@@ -196,11 +221,18 @@ p, .lead {
   padding: 12px 24px;
   font-weight: 600;
   transition: all 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     background-color: white;
     color: $primary-blue;
     border-color: $accent-color;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    transform: translateY(0);
   }
 }
 
@@ -212,18 +244,25 @@ p, .lead {
   padding: 12px 24px;
   font-weight: 600;
   transition: all 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     background-color: $primary-blue;
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    transform: translateY(0);
   }
 }
 
 .nav-link {
   font-weight: 600;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   letter-spacing: 0.05rem;
-  color: $dark-blue !important;
+  color: #FFFFFF !important;
   transition: color 0.3s ease;
   position: relative;
   padding-bottom: 8px !important;
@@ -235,7 +274,7 @@ p, .lead {
     height: 2px;
     bottom: 0;
     left: 50%;
-    background-color: $accent-color;
+    background-color: $text-dark-purple;
     transition: width 0.3s ease;
     transform: translateX(-50%);
   }
@@ -245,7 +284,7 @@ p, .lead {
   }
 
   &.active {
-    color: $primary-blue !important;
+    color: $text-dark-purple !important;
   }
 }
 
@@ -277,9 +316,9 @@ p, .lead {
 
   .nav-link {
     @media (max-width: 991px) {
-      font-size: 1.1rem;
+      font-size: 1rem;
       padding: 1rem 1.5rem !important;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.5);
       width: 100%;
       color: white !important;
       
@@ -315,12 +354,16 @@ p, .lead {
     position: absolute;
     top: 0;
     left: 0;
-    width: 500px;
+    width: 600px;
     height: 100%;
-    background-color: #54a0e5;
+    background-image: url('/assets/images/hero-div-pattern.jpg');
+    background-color: #81a4f5;
     z-index: 1;
     opacity: .5;
     border-radius: 0 72px 0 0;
+    @media (max-width: 768px) {
+    width: 200px;
+    }
   }
 
   .hero-overlay-div2 {
@@ -350,21 +393,20 @@ p, .lead {
     font-size: 3.5rem;
     font-weight: 800;
     color: $dark-blue;
-    text-shadow: 0 0 20px white;
+    text-shadow: 0 0 50px white;
   }
 
   .hero-title-home {
       font-size: 3.5rem;
       font-weight: 800;
       color: $dark-blue-home;
-      text-shadow: 0 0 20px white;
+      text-shadow: 0 0 40px white;
     }
 
   .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     font-weight: 600;
-    color: #7471b7;
-    text-shadow: 0 0 25px #FFFFFF;
+    color: #FFFFFF;
   }
 }
 
@@ -409,7 +451,7 @@ p, .lead {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/assets/images/services-bg.jpg');
+  background-image: url('/assets/images/services-bg.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -423,7 +465,7 @@ p, .lead {
   min-height: 350px;
   height: auto;
   border-radius: 0;
-  background: linear-gradient(135deg, rgba(202, 219, 233, 0.9) 0%, rgba(163, 196, 220, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(202, 219, 233, 0.9) 0%, #c8d6fe 100%);
   color: white;
   padding: 60px 40px;
   display: flex;
@@ -460,8 +502,18 @@ p, .lead {
     border-radius: 6px;
     padding: 10px 25px;
     font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border:2px solid;
     @media (max-width: 768px) {
       position: relative;
+    }
+
+    &:hover {
+      background: linear-gradient(90deg, #4A96FF 0%, #9C99F5 100%) !important;
+      border-color: transparent !important;
+      color: #FFFFFF !important;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(74, 150, 255, 0.3);
     }
   }
 }
@@ -486,6 +538,7 @@ p, .lead {
 
     p {
       font-size: 1.35rem;
+      margin-top: 2rem;
     }
   }
 
