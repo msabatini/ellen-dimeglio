@@ -3,9 +3,9 @@
 .about-hero {
   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/assets/images/about-hero.png');
   background-size: 70%;
-  background-position: 100% -80%;
+  background-position: 100% 30%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
 
   @media (max-width: 1600px) {
   background-position: center 30%;

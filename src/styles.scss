@@ -181,7 +181,7 @@ p, .lead {
 
 .btn-gradient-outline {
   background: transparent;
-  color: $primary-blue !important;
+  color: #FFF !important;
   border: 2px solid $primary-blue;
   border-radius: 6px;
   padding: 12px 30px;
@@ -347,7 +347,7 @@ p, .lead {
   display: flex;
   align-items: center;
   background-position: center 40%;
-  background-attachment: fixed;
+  background-attachment: scroll;
   z-index: 10;
 
   .hero-overlay-div {
@@ -454,7 +454,7 @@ p, .lead {
   background-image: url('/assets/images/services-bg.png');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   opacity: 1;
   z-index: -1;
   transform: rotate(90deg) scale(2); // Scale up to ensure coverage when rotated
