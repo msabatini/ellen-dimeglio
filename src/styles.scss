@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4, .display
 p, .lead {
   text-wrap: balance;
   line-height: 2rem;
+  color: $text-blue;
 }
 
 .container-custom {
@@ -139,9 +140,8 @@ p, .lead {
 }
 
 .service-card-custom {
-  background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
-  border: 1px solid rgba(108, 152, 193, 0.1) !important;
-  border-bottom: 3px solid transparent !important;
+  background: linear-gradient(135deg, #ffffff 0%, #c8d6fe 100%);
+  border: 1px solid rgba(105, 119, 155, 0.1) !important;
   transition: all 0.3s ease;
 
   p {
@@ -149,9 +149,9 @@ p, .lead {
   }
 
   &:hover {
-    background: linear-gradient(135deg, #ffffff 0%, #e6f2ff 100%);
-    border-color: rgba(108, 152, 193, 0.3) !important;
-    border-bottom-color: $accent-color !important;
+    background: linear-gradient(135deg, #ffffff 0%, #c8d6fe 100%);
+    border-bottom: 3px solid rgba(105, 119, 155, 0.3) !important;
+    border-bottom-color: #8583c0 !important;
     transform: translateY(-5px);
   }
 }
@@ -406,7 +406,7 @@ p, .lead {
     font-size: 1.75rem;
     font-weight: 600;
     color: #FFFFFF;
-    text-shadow: 0 0 20px #a6c0fa;
+    text-shadow: 0 0 40px #a6c0fa;
   }
 }
 
@@ -425,6 +425,10 @@ p, .lead {
 .cornerstone-list {
   list-style: none;
   padding-left: 0;
+
+  .list-bold {
+    color: $dark-blue;
+  }
 
   li::before {
     content: "•";
@@ -468,7 +472,7 @@ p, .lead {
   min-height: 350px;
   height: auto;
   border-radius: 0;
-  background: linear-gradient(135deg, #c8d6fe 0%, #c8d6fe  100%);
+  background: linear-gradient(135deg, rgba(202, 219, 233, 0.9) 0%, rgba(200, 214, 254, 0.9) 100%);
   color: white;
   padding: 60px 40px;
   display: flex;
