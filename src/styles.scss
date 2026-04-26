@@ -465,7 +465,7 @@ p, .lead {
   min-height: 350px;
   height: auto;
   border-radius: 0;
-  background: linear-gradient(135deg, rgba(202, 219, 233, 0.9) 0%, #c8d6fe 100%);
+  background: linear-gradient(135deg, #c8d6fe 0%, #cadbe9 100%);
   color: white;
   padding: 60px 40px;
   display: flex;
@@ -503,14 +503,16 @@ p, .lead {
     padding: 10px 25px;
     font-size: 0.95rem;
     transition: all 0.3s ease;
-    border:2px solid;
+    border: 2px solid transparent;
+    background: linear-gradient(90deg, #4A96FF 0%, #9C99F5 100%);
+    color: white;
     @media (max-width: 768px) {
       position: relative;
     }
 
     &:hover {
-      background: linear-gradient(90deg, #4A96FF 0%, #9C99F5 100%) !important;
-      border-color: transparent !important;
+      background: transparent !important;
+      border-color: white !important;
       color: #FFFFFF !important;
       transform: translateY(-2px);
       box-shadow: 0 5px 15px rgba(74, 150, 255, 0.3);
@@ -592,4 +594,13 @@ p, .lead {
   color: rgba(255, 255, 255, 0.7);
   padding: 20px 0;
   font-size: 0.8rem;
+}
+
+/* SimplePractice Widget Styles */
+.spwidget-button-wrapper {
+  text-align: center;
+}
+.spwidget-button {
+  display: inline-block;
+  text-decoration: none;
 }
