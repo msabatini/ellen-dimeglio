@@ -1,9 +1,10 @@
 import { Component, signal, afterNextRender } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { BookingButtonComponent } from './shared/booking-button/booking-button.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, BookingButtonComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

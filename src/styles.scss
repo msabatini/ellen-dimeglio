@@ -1,5 +1,15 @@
 @import 'variables';
 
+:root {
+  --primary-color: #{$primary-blue};
+  --secondary-color: #{$secondary-blue};
+  --dark-blue: #{$dark-blue};
+  --accent-color: #{$accent-color};
+  --text-dark-purple: #{$text-dark-purple};
+  --border-radius: 6px;
+  --font-family: 'Outfit', sans-serif;
+}
+
 html, body {
   overflow-x: hidden;
   width: 100%;
@@ -641,7 +651,24 @@ p, .lead {
 .spwidget-button-wrapper {
   text-align: center;
 }
+
 .spwidget-button {
   display: inline-block;
   text-decoration: none;
+  font-family: var(--font-family) !important;
+  transition: all 0.3s ease;
+  
+  // Custom overrides for the injected SimplePractice button
+  &.sp-booking-button {
+    background-color: var(--primary-color) !important;
+    border-radius: var(--border-radius) !important;
+    font-family: var(--font-family) !important;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+    &:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+  }
 }
