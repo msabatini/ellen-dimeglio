@@ -371,7 +371,7 @@ p, .lead {
 
 .hero-section {
   position: relative; // Ensure absolute children are positioned correctly
-  background-image: url('/assets/images/home-page-hero.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/assets/images/home-page-hero.jpg');
   background-size: cover;
   min-height: 500px;
   display: flex;
@@ -436,7 +436,7 @@ p, .lead {
     font-size: 1.75rem;
     font-weight: 600;
     color: #FFFFFF;
-    text-shadow: 0 0 40px #a6c0fa;
+    text-shadow: 0 0 40px #7c98d5;
   }
 }
 
@@ -457,7 +457,7 @@ p, .lead {
   padding-left: 0;
 
   .list-bold {
-    color: $dark-blue;
+    color: $text-dark-purple;
   }
 
   li::before {
