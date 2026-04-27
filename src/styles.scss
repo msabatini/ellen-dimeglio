@@ -390,6 +390,11 @@ p, .lead {
   background-attachment: fixed;
   z-index: 10;
 
+  @media (max-width: 768px) {
+    background-attachment: scroll;
+    background-position: center;
+  }
+
   .hero-overlay-div {
     position: absolute;
     top: 0;
