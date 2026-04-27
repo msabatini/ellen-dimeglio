@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4, .display
 p, .lead {
   text-wrap: balance;
   line-height: 2rem;
-  color: $text-blue;
+  color: #FFFFFF;
 }
 
 .container-custom {
@@ -68,8 +68,32 @@ p, .lead {
     &:hover {
       background: none;
     }
-    .navbar-toggler-icon {
-      filter: brightness(0) invert(1);
+
+    @media (max-width: 991px) {
+      padding: 0;
+      width: 30px;
+      height: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: none;
+
+      .burger-menu {
+        width: 30px;
+        height: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .burger-bar {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $dark-blue;
+        border-radius: 1px;
+        transition: all 0.3s ease;
+      }
     }
   }
 }
@@ -111,6 +135,8 @@ p, .lead {
 .border-dark-purple { border-color: $text-dark-purple !important; }
 .text-accent { color: $accent-color; }
 .text-blue { color: $text-blue; }
+.bg-light { color: $light-bg; }
+.bg-white { color: $white-bg; }
 
 .hover-shadow {
   transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -157,7 +183,7 @@ p, .lead {
 }
 
 .btn-gradient {
-  background: linear-gradient(90deg, #4A96FF 0%, #9C99F5 100%);
+  background: linear-gradient(90deg, #605e82 0%, #9C99F5 100%);
   color: #FFFFFF !important;
   border: 2px solid transparent;
   border-radius: 6px;
@@ -168,8 +194,8 @@ p, .lead {
 
   &:hover {
     background: transparent !important;
-    color: $primary-blue !important;
-    border-color: $primary-blue;
+    color: $dark-blue !important;
+    border-color: $dark-blue;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(74, 150, 255, 0.3);
   }
@@ -182,7 +208,7 @@ p, .lead {
 .btn-gradient-outline {
   background: transparent;
   color: $dark-blue !important;
-  border: 2px solid $primary-blue;
+  border: 2px solid $dark-blue !important;
   border-radius: 6px;
   padding: 12px 30px;
   font-weight: 600;
@@ -190,9 +216,9 @@ p, .lead {
   cursor: pointer;
 
   &:hover {
-    background: linear-gradient(90deg, #4A96FF 0%, #9C99F5 100%) !important;
+    background: linear-gradient(90deg, #605e81 0%, #9C99F5 100%) !important;
     color: #FFFFFF !important;
-    border-color: transparent;
+    border-color: transparent !important;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(74, 150, 255, 0.2);
   }
@@ -207,8 +233,8 @@ p, .lead {
 
   &:hover {
     background: transparent !important;
-    color: #FFFFFF !important;
-    border-color: #FFFFFF;
+    color: $dark-blue !important;
+    border-color: $dark-blue;
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
   }
 }
@@ -449,7 +475,7 @@ p, .lead {
 .services-wrapper {
   position: relative;
   overflow: hidden;
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
 .services-bg {
@@ -472,7 +498,7 @@ p, .lead {
   min-height: 350px;
   height: auto;
   border-radius: 0;
-  background: linear-gradient(135deg, rgba(202, 219, 233, 0.9) 0%, rgba(200, 214, 254, 0.9) 100%);
+  background: linear-gradient(135deg, rgb(199 206 231) 0%, rgb(199 214 255) 100%);
   color: white;
   padding: 60px 40px;
   display: flex;
@@ -511,7 +537,7 @@ p, .lead {
     font-size: 0.95rem;
     transition: all 0.3s ease;
     border: 2px solid transparent;
-    background: linear-gradient(90deg, #4A96FF 0%, #9C99F5 100%);
+    background: linear-gradient(90deg, #605e82 0%, #9C99F5 100%);
     color: white;
     @media (max-width: 768px) {
       position: relative;
@@ -596,7 +622,7 @@ p, .lead {
 
   .footer-nav .nav-link {
     color: white !important;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
   }
 }
 
