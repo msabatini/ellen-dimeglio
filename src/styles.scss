@@ -151,14 +151,18 @@ p, .lead {
 }
 
 .service-icon {
-  filter: invert(53%) sepia(21%) saturate(1021%) hue-rotate(172deg) brightness(96%) contrast(87%); // Approx $primary-blue
+  filter: invert(55%) sepia(33%) saturate(547%) hue-rotate(203deg) brightness(88%) contrast(87%); // $text-dark-purple
   transition: transform 0.3s ease;
 }
 
 .service-icon-page {
-  filter: invert(53%) sepia(21%) saturate(1021%) hue-rotate(172deg) brightness(96%) contrast(87%); // Approx $primary-blue
+  filter: invert(55%) sepia(33%) saturate(547%) hue-rotate(203deg) brightness(88%) contrast(87%); // $text-dark-purple
   height: 100px;
   width: auto;
+}
+
+.icon-purple {
+  filter: invert(55%) sepia(33%) saturate(547%) hue-rotate(203deg) brightness(88%) contrast(87%); // $text-dark-purple
 }
 
 .hover-shadow:hover .service-icon {
@@ -458,7 +462,7 @@ p, .lead {
 
   li::before {
     content: "•";
-    color: $primary-blue;
+    color: $text-dark-purple;
     display: inline-block;
     width: 1em;
     margin-left: -1em;
