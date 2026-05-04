@@ -1,15 +1,17 @@
-import { Component, signal, afterNextRender } from '@angular/core';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, signal, afterNextRender, inject } from '@angular/core';
+import { RouterOutlet, RouterLink, RouterLinkActive, Router } from '@angular/router';
 import { BookingButtonComponent } from './shared/booking-button/booking-button.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, BookingButtonComponent],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, BookingButtonComponent, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
   protected readonly title = signal('ellen-dimeglio');
+  protected readonly router = inject(Router);
 
   constructor() {
     afterNextRender(() => {

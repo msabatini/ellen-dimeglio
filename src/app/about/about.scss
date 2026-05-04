@@ -1,5 +1,16 @@
 @import '../../_variables.scss';
 
+@media (max-width: 375px) {
+  .about-hero {
+    min-height: 600px !important;
+    background-position: center 30% !important;
+  }
+  .about-hero + .py-5 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
 .about-hero {
   background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('/assets/images/about-hero.png');
   background-size: 100%;

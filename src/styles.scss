@@ -379,6 +379,13 @@ p, .lead {
   }
 }
 
+@media (max-width: 375px) {
+  .services-hero + .py-5 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
 .hero-section {
   position: relative; // Ensure absolute children are positioned correctly
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/assets/images/home-page-hero.jpg');
@@ -452,6 +459,15 @@ p, .lead {
     font-weight: 600;
     color: #FFFFFF;
     text-shadow: 0 0 40px #7c98d5;
+  }
+}
+
+@media (max-width: 375px) {
+  .philosophy-section {
+    padding-bottom: 0 !important;
+  }
+  .services-wrapper {
+    padding-top: 0 !important;
   }
 }
 
@@ -662,6 +678,10 @@ p, .lead {
   text-decoration: none;
   font-family: var(--font-family) !important;
   transition: all 0.3s ease;
+  
+  @media (max-width: 375px) {
+    font-size: 0.85rem !important;
+  }
   
   // Custom overrides for the injected SimplePractice button
   &.sp-booking-button {

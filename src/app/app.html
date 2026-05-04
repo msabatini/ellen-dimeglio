@@ -38,7 +38,7 @@
 
 <router-outlet />
 
-<section class="py-5 bg-light reveal">
+<section *ngIf="router.url !== '/contact'" class="py-5 reveal">
   <div class="container-custom py-5">
     <div class="row justify-content-center">
       <div class="col-md-10 text-center">
@@ -46,7 +46,7 @@
         <p class="fs-5 text-blue mb-5">Whether you are seeking a comprehensive evaluation or individual therapy, I am here to support you. Select an option below to schedule a consultation through Simple Practice.</p>
         <div class="d-grid d-sm-flex justify-content-sm-center gap-3 mt-4 spwidget-button-wrapper">
           <app-booking-button url="https://ellen-dimeglio.clientsecure.me">Schedule Evaluation Consultation</app-booking-button>
-          <app-booking-button url="https://ellen-dimeglio.clientsecure.me/contact-widget" className="btn btn-gradient-outline px-5 spwidget-button">Schedule Therapy Consultation</app-booking-button>
+          <app-booking-button url="https://ellen-dimeglio.clientsecure.me/contact-widget" className="btn btn-gradient-outline px-5 spwidget-button">Request Therapy info</app-booking-button>
         </div>
       </div>
     </div>
